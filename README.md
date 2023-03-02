@@ -52,22 +52,21 @@ People can create their own accounts and log-in to them.
 ## Database models
 
 - **Exercise**:
-  - **id** - int - id
+  - **[PK] id** - int - id
+  - **[FK] author** - int - id of user who created exercise
   - **date** - datetime - creation date
-  - **creator** - int - id of user who created exercise
   - **content** - text - content of an exercise, description of the problem
-  - **rating** - int - from 1 to 5 user rating (rounded)
   - **difficulty** - int - from 1 to 5 scale of how difficult the exercise is
   - **tags** - text - tags separated with spaces
 
 - **Comment**:
-  - **id** - int - id
-  - **exercise_id** - int - id of exercise that comment is made on
+  - **[PK] id** - int - id
+  - **[FK] exercise_id** - int - id of exercise that comment is made on
   - **date** - datetime - creation date
   - **content** - text - content of a comment
 
 - **User**:
-  - **id** - int - id
+  - **[PK] id** - int - id
   - **username** - text - visible username of user
   - **email** - text - email
   - **date** - datetime - registration date
